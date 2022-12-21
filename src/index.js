@@ -18,7 +18,8 @@ const controls = new OrbitControls( camera, renderer.domElement );
 const light = new THREE.AmbientLight( 0x404040 ); // soft white light
 scene.add( light );
 
-const directionalLight = new THREE.DirectionalLight( 0xffffff, 1 );
+const directionalLight = new THREE.DirectionalLight( 0xFFF0ED, 1 );
+directionalLight.position.set(2,2,0);
 scene.add( directionalLight );
 
 scene.background = new THREE.Color( 0x404040 );
