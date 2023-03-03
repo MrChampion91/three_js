@@ -15,6 +15,19 @@ const config = {
     compress: true,
     port: 8000,
   },
+  module: {
+    rules: [
+      {
+        test: /\.js$/, // регулярное выражение для идентификации файлов, которые будут использовать загрузчик
+        exclude: /node_modules/, // файлы, которые будут проигнорированы загрузчиком
+        use: {
+          loader: "babel-loader" // имя загрузчика
+        }
+      }
+    ]
+  }
+
+
 };
 
 module.exports = config;
